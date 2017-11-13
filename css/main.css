@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1D8DC2;
+}
+
+/*Style for nav*/
+
+.main-menu {
+    width: 100%;
+    background: #147AA7;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+nav li {
+    display: inline-block;
+    background-color: #66A3C1;
+    color: #fff;
+    margin: 0;
+
+}
+
+.trello-icon {
+    border-radius: 6px;
+    background-color: #66A3C1;
+    margin: 0 5px;
+}
+
+.trello-icon a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    padding: 7px;
+}
+
+ .trello-icon a:hover {
+     color: #000000;
+}
+
+.trello-icon i {
+    height: 100%;
+    vertical-align: middle;
+}
+
+.search {
+     border-radius: 6px;
+     background-color: #66A3C1;
+     margin: 0;
+}
+
+.search-box {
+    display: inline-block;
+    width: 85%;
+    padding: 12px;
+}
+
+.search-box i {
+    color: #fff;
+}
+
+.search-box form {
+    display: inline-block;
+    width: 85%;
+}
+
+.search-box input {
+    background-color:transparent;
+    border: none;
+    outline: none; 
+    font-size: 18px;
+    width: 30%;
+}
+
+.images {
+    text-align: center;
+    background-color: #147AA7;
+    width: 55%;
+    vertical-align: middle;
+}
+
+.images img {
+    width: 100px;
+}
+
+.white-icon {
+    padding: 10px 10px;
+    background-color: #66A3C1;
+    border-radius: 6px;
+}
+
+.white-icon i {
+    color: #fff;
+}
+
+/* Styles for first-container*/
+
+header {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.first-container {
+    position: absolute;
+    display: inline-block;
+}
+
+.first-container ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.first-container li {
+    display: inline-block;
+    color: #fff;
+    margin: 0;
+}
+
+.first-container h1 {
+    display: inline-block;
+    color: #fff;
+    padding: 10px;
+}
+
+.header-icon {
+    color: #fff;
+    padding: 10px 10px;
+}
+
+.header-icon a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-icon i {
+    color: #fff;
+    margin-right: 10px;
+}
+
+.fa-minus {
+    padding-left: 500px;
+}
+/* Styles for form*/
+
+#container-form {
+    display: inline-block;
+    width: 65%;
+    margin-top:100px;
+}
+
+#container-form input {
+    background-color:#157CAC;
+    border: 1px solid #157CAC;
+    border-radius: 1rem;
+    outline: none; 
+    font-size: 18px;
+    padding: 10px;
+    width: 30%;
+}
+
+
