@@ -8,7 +8,7 @@ body {
     background-color: #1D8DC2;
 }
 
-/*Style for nav*/
+/*Style for Nav*/
 
 .main-menu {
     width: 100%;
@@ -104,7 +104,7 @@ nav li {
     color: #fff;
 }
 
-/* Styles for first-container*/
+/* Styles for Header*/
 
 header {
     position: relative;
@@ -155,12 +155,13 @@ header {
 .fa-minus {
     padding-left: 500px;
 }
-/* Styles for form*/
+/* Styles for first-container*/
 
 #container-form {
-    display: inline-block;
+    position: fixed;
     width: 65%;
     margin-top:100px;
+    z-index: -1;
 }
 
 #container-form input {
@@ -170,7 +171,52 @@ header {
     outline: none; 
     font-size: 18px;
     padding: 10px;
-    width: 30%;
+    width: 40%;
+    margin-left: 10px;
+}
+
+/* Styles for second-container*/
+
+#new-form {
+    float: left;
+    width: 26%;
+    margin-top: 100px;
+    margin-left: 10px;
+    background-color: #E7E7EB;
+}
+
+.container-input {
+    background-color:#DBDCDF;
+    border: 1px solid #C8C9CD;
+    border-radius: 1rem;
+    outline: none; 
+    font-size: 18px;
+    padding: 10px;
+    width: 98%;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+.container-button {
+    color: #fff;
+    border: 1px solid #92D082;
+    background-color: #6BBA55;
+    padding: 0.6rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    outline: 0;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.container-button:active {
+    background-color: #E0E4E2;
+    border: 1px solid #000;
+    color: #C4C0BF;
+    border-radius: 0.5rem;
+    outline: 0;
 }
 
 
