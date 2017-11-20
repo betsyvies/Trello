@@ -33,65 +33,76 @@ window.addEventListener('load', function() {
       
     /* Al realizar este evento se mostrará un nuevo cuadro con el nombre de la lista agregada */
     
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function newBox() {
       event.preventDefault();
+      if (input.value === '') {
         
-      var nameList = document.createElement('div');
-      nameList.className = 'name-list';
+      } else {
+        var nameList = document.createElement('div');
+        nameList.className = 'name-list';
+            
+        var textList = document.createElement('p');
+        textList.textContent = input.value;
+        textList.className = 'text-list';
           
-      var textList = document.createElement('p');
-      textList.textContent = input.value;
-      textList.className = 'text-list';
+        var tarea = document.createElement('p');
+        var textTarea = document.createTextNode('Añadir una tarea...');
+        tarea.className = 'text-tarea';
         
-      var tarea = document.createElement('p');
-      var textTarea = document.createTextNode('Añadir una tarea...');
-      tarea.className = 'text-tarea';
-      
-      button.removeChild(text);
-      form.removeChild(input); 
-      form.removeChild(button); 
-      section.removeChild(form);
+        button.removeChild(text);
+        form.removeChild(input); 
+        form.removeChild(button); 
+        section.removeChild(form);
+  
+        tarea.appendChild(textTarea);
+        nameList.appendChild(textList); 
+        nameList.appendChild(tarea);
+        section.appendChild(nameList);
+  
+        button.appendChild(text);
+        form.appendChild(input); 
+        form.appendChild(button); 
+        section.appendChild(form);
 
-      tarea.appendChild(textTarea);
-      nameList.appendChild(textList); 
-      nameList.appendChild(tarea);
-      section.appendChild(nameList);
-
-      button.appendChild(text);
-      form.appendChild(input); 
-      form.appendChild(button); 
-      section.appendChild(form);
-
+        input.value = '';
+      }
+  
       /* Al realizar este evento se mostrará un formulario con un textarea y un botón */
-      
-      tarea.addEventListener('click', function() {
+        
+      tarea.addEventListener('click', function showForm() {
         var textarea = document.createElement('textarea');
         textarea.className = 'textarea';
-
+  
         var addbutton = document.createElement('button');
         var addText = document.createTextNode('Añadir');
         addbutton.className = 'add-button';
-
+  
         nameList.appendChild(textarea);
         addbutton.appendChild(addText);
         nameList.appendChild(addbutton);
-                
+                  
         tarea.removeChild(textTarea);
         nameList.removeChild(tarea);
-
-        
+      
+              
         /* Al realizar este evento se mostrará el texto de la tarea debajo del título de la lista */
       
-        addbutton.addEventListener('click', function() {
-          var addList = document.createElement('p');
-          addList.textContent = textarea.value;
-          addList.className = 'add-list';
+        addbutton.addEventListener('click', function textDown() {
+          if (textarea.value === '') {
 
-          nameList.removeChild(textarea);
+          } else {
+            var addList = document.createElement('p');
+            addList.textContent = textarea.value;
+            addList.className = 'add-list';
+  
+            nameList.removeChild(textarea);
+  
+            nameList.appendChild(addList);
+            nameList.appendChild(textarea);
+            nameList.appendChild(addbutton);
 
-          nameList.appendChild(addList);
-          nameList.appendChild(textarea);
-          nameList.appendChild(addbutton);
+            textarea.value = '';
+          }
         });
       });
     });
