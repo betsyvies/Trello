@@ -164,7 +164,7 @@ header {
     z-index: -1;
 }
 
-#container-form input {
+#container-list {
     background-color:#157CAC;
     border: 1px solid #157CAC;
     border-radius: 1rem;
@@ -175,14 +175,14 @@ header {
     margin-left: 10px;
 }
 
-/* Styles for second-container*/
+/* Styles for elements created in JS*/
 
-#new-form {
+.form {
     float: left;
-    width: 26%;
-    margin-top: 100px;
+    width: 40%;
     margin-left: 10px;
     background-color: #E7E7EB;
+    clear: both;
 }
 
 .container-input {
@@ -219,4 +219,34 @@ header {
     outline: 0;
 }
 
+.name-list {
+    float: left;
+    width: 26%;
+    margin-left: 10px;
+    background-color: #E7E7EB;
+    clear: both;
+}
 
+.text-list {
+    font-size: 18px;
+    padding: 10px;
+    width: 98%;
+    height: 30px;
+    color: #000;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+.text-tarea {
+    background-color:#C8C9CD;
+    border: 1px solid #C8C9CD;
+    text-decoration-line:1px solid #000;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+}
+
+.text-tarea:hover {
+    cursor: pointer;
+}

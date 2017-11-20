@@ -1,30 +1,68 @@
 /* Inicializamos con una funcion que contendra los eventos a utilizar */
 
 window.addEventListener('load', function() {
+  var body = document.getElementsByTagName('body');
   var list = document.getElementById('container-list');
-  list.addEventListener('click', showForm);
-});
 
-/* La funcion showForm oculta el input y muestra un formulario */
+  /* La el evento hará que se oculte el input y muestre un formulario */
 
-function showForm(event) {
-  event.preventDefault();
-
-  var containerForm = document.getElementById('new-form');
-  var form = document.createElement('form');
-  form.className = 'form';
+  list.addEventListener('click', function() {
+    event.preventDefault();
     
-  var input = document.createElement('input');
-  input.className = 'container-input';
-  input.setAttribute('placeholder', 'Añadir una lista...');
+    var section = document.getElementById('container-form');
+    var sectionForm = document.getElementById('section-form');
+       
+    var form = document.createElement('form');
+    form.className = 'form';
+        
+    var input = document.createElement('input');
+    input.className = 'container-input';
+    input.setAttribute('placeholder', 'Añadir una lista...');
+    
+    var button = document.createElement('button');
+    var text = document.createTextNode('Guardar');
+    button.className = 'container-button';
+      
+    button.appendChild(text);
+    form.appendChild(input); 
+    form.appendChild(button); 
+    section.appendChild(form);
 
-  var button = document.createElement('button');
-  button.addEventListener('click', )
-  var text = document.createTextNode('Guardar');
-  button.className = 'container-button';
-  
-  button.appendChild(text);
-  form.appendChild(input); 
-  form.appendChild(button); 
-  containerForm.appendChild(form);
-};
+    sectionForm.removeChild(list);
+    section.removeChild(sectionForm);
+      
+    /* Al realizar este evento se mostrará un nuevo cuadro con el nombre de la lista agregada */
+    
+    button.addEventListener('click', function() {
+      event.preventDefault();
+        
+      var nameList = document.createElement('div');
+      nameList.className = 'name-list';
+          
+      var textList = document.createElement('p');
+      textList.innerText = input.value;
+      textList.className = 'text-list';
+        
+      var tarea = document.createElement('p');
+      var textTarea = document.createTextNode('Añadir una tarea...');
+      tarea.className = 'text-tarea';
+      
+      tarea.appendChild(textTarea);
+      nameList.appendChild(textList); 
+      nameList.appendChild(tarea);
+      section.appendChild(nameList);
+
+      button.removeChild(text);
+      form.removeChild(input); 
+      form.removeChild(button); 
+      section.removeChild(form);
+
+      tarea.addEventListener('click', function() {
+        var textarea = document.createElement('textarea');
+        textarea.className('textarea');
+      });
+
+      /* debugger; */
+    });
+  });
+});
