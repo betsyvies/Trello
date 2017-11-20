@@ -40,22 +40,27 @@ window.addEventListener('load', function() {
       nameList.className = 'name-list';
           
       var textList = document.createElement('p');
-      textList.innerText = input.value;
+      textList.textContent = input.value;
       textList.className = 'text-list';
         
       var tarea = document.createElement('p');
       var textTarea = document.createTextNode('Añadir una tarea...');
       tarea.className = 'text-tarea';
       
+      button.removeChild(text);
+      form.removeChild(input); 
+      form.removeChild(button); 
+      section.removeChild(form);
+
       tarea.appendChild(textTarea);
       nameList.appendChild(textList); 
       nameList.appendChild(tarea);
       section.appendChild(nameList);
 
-      button.removeChild(text);
-      form.removeChild(input); 
-      form.removeChild(button); 
-      section.removeChild(form);
+      button.appendChild(text);
+      form.appendChild(input); 
+      form.appendChild(button); 
+      section.appendChild(form);
 
       /* Al realizar este evento se mostrará un formulario con un textarea y un botón */
       
@@ -73,9 +78,22 @@ window.addEventListener('load', function() {
                 
         tarea.removeChild(textTarea);
         nameList.removeChild(tarea);
-      });
 
-      /* debugger; */
+        
+        /* Al realizar este evento se mostrará el texto de la tarea debajo del título de la lista */
+      
+        addbutton.addEventListener('click', function() {
+          var addList = document.createElement('p');
+          addList.textContent = textarea.value;
+          addList.className = 'add-list';
+
+          nameList.removeChild(textarea);
+
+          nameList.appendChild(addList);
+          nameList.appendChild(textarea);
+          nameList.appendChild(addbutton);
+        });
+      });
     });
   });
 });

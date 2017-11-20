@@ -178,7 +178,7 @@ header {
 /* Styles for elements created in JS*/
 
 .form {
-    float: left;
+    display: inline-block;
     width: 40%;
     margin-left: 10px;
     background-color: #E7E7EB;
@@ -250,6 +250,10 @@ header {
     cursor: pointer;
 }
 
+.text-tarea:focus {
+    color: #000;
+}
+
 .textarea {
     border: 1px solid #C8C9CD;
     font-size: 18px;
@@ -280,4 +284,16 @@ header {
     color: #C4C0BF;
     border-radius: 0.5rem;
     outline: 0;
+}
+
+.add-list {
+    background-color: #EEF2F5;
+    font-size: 18px;
+    border-radius: 1.5rem;
+    width: 98%;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    padding-left: 5px;
 }
