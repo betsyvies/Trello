@@ -57,9 +57,22 @@ window.addEventListener('load', function() {
       form.removeChild(button); 
       section.removeChild(form);
 
+      /* Al realizar este evento se mostrará un formulario con un textarea y un botón */
+      
       tarea.addEventListener('click', function() {
         var textarea = document.createElement('textarea');
-        textarea.className('textarea');
+        textarea.className = 'textarea';
+
+        var addbutton = document.createElement('button');
+        var addText = document.createTextNode('Añadir');
+        addbutton.className = 'add-button';
+
+        nameList.appendChild(textarea);
+        addbutton.appendChild(addText);
+        nameList.appendChild(addbutton);
+                
+        tarea.removeChild(textTarea);
+        nameList.removeChild(tarea);
       });
 
       /* debugger; */
