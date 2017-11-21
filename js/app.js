@@ -35,9 +35,7 @@ window.addEventListener('load', function() {
     
     button.addEventListener('click', function newBox() {
       event.preventDefault();
-      if (input.value === '') {
-        
-      } else {
+      if (input.value) {
         var nameList = document.createElement('div');
         nameList.className = 'name-list';
             

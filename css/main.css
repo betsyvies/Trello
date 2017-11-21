@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #1D8DC2;
+    background-image: url('../assets/images/paisaje.jpg');
 }
 
 /*Style for Nav*/
@@ -128,7 +128,10 @@ header {
 .first-container li {
     display: inline-block;
     color: #fff;
-    margin: 0;
+}
+
+.menu {
+    margin-left: 260px;
 }
 
 .first-container h1 {
@@ -165,8 +168,8 @@ header {
 }
 
 #container-list {
-    background-color:#157CAC;
-    border: 1px solid #157CAC;
+    background-color:#E7E7EB;
+    border: 1px solid #E7E7EB;
     border-radius: 1rem;
     outline: none; 
     font-size: 18px;
@@ -179,8 +182,8 @@ header {
 
 .form {
     display: inline-block;
-    width: 25%;
-    margin-left: 10px;
+    width: 23.5%;
+    margin-left: 20px;
     background-color: #E7E7EB;
     clear: both;
 }
@@ -221,10 +224,12 @@ header {
 
 .name-list {
     display: inline-block;
-    width: 25%;
-    margin-left: 10px;
+    width: 23.5%;
+    margin-left: 20px;
     background-color: #E7E7EB;
     overflow: hidden;
+    vertical-align: top;
+    margin-bottom: 20px;
 }
 
 .text-list {
