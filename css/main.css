@@ -12,7 +12,7 @@ body {
 
 .main-menu {
     width: 100%;
-    background: #147AA7;
+    background: rgba(27, 27, 27, 0.2);
 }
 
 nav ul {
@@ -25,15 +25,15 @@ nav ul {
 
 nav li {
     display: inline-block;
-    background-color: #66A3C1;
+    background-color: rgba(255, 255, 255, 0.3);
     color: #fff;
     margin: 0;
-
+    vertical-align: bottom;
 }
 
 .trello-icon {
     border-radius: 6px;
-    background-color: #66A3C1;
+    background-color: rgba(255, 255, 255, 0.3);
     margin: 0 5px;
 }
 
@@ -56,7 +56,7 @@ nav li {
 
 .search {
      border-radius: 6px;
-     background-color: #66A3C1;
+     background-color: rgba(255, 255, 255, 0.3);
      margin: 0;
 }
 
@@ -83,20 +83,19 @@ nav li {
     width: 30%;
 }
 
-.images {
+.image {
     text-align: center;
-    background-color: #147AA7;
+    background-color: transparent;
     width: 55%;
-    vertical-align: middle;
 }
 
-.images img {
+.image img {
     width: 100px;
 }
 
 .white-icon {
     padding: 10px 10px;
-    background-color: #66A3C1;
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 6px;
 }
 
@@ -113,25 +112,25 @@ header {
 }
 
 .first-container {
-    position: absolute;
+    width: 83%;
     display: inline-block;
 }
 
-.first-container ul {
+.list-icon {
     display: inline-block;
     list-style: none;
-    margin: 0;
     padding: 10px 20px;
     text-align: center;
 }
 
-.first-container li {
+.header-icon {
     display: inline-block;
     color: #fff;
 }
 
-.menu {
-    margin-left: 260px;
+.second-container {
+    display: inline-block;
+    width: 14%;
 }
 
 .first-container h1 {
@@ -155,15 +154,12 @@ header {
     margin-right: 10px;
 }
 
-.fa-minus {
-    padding-left: 500px;
-}
 /* Styles for first-container*/
 
 #container-form {
     position: fixed;
     width: 100%;
-    margin-top:100px;
+    margin-top:30px;
     z-index: -1;
 }
 
@@ -242,17 +238,14 @@ header {
 }
 
 .text-tarea {
+    display: inline-block;
+    color: #000;
     background-color:#C8C9CD;
     border: 1px solid #C8C9CD;
-    text-decoration-line:1px solid #000;
     font-size: 18px;
     padding: 10px;
     width: 100%;
     margin: 0;
-}
-
-.text-tarea:hover {
-    cursor: pointer;
 }
 
 .text-tarea:focus {

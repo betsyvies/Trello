@@ -4,7 +4,7 @@ window.addEventListener('load', function() {
   var body = document.getElementsByTagName('body');
   var list = document.getElementById('container-list');
 
-  /* La el evento hará que se oculte el input y muestre un formulario */
+  /* El evento hará que se oculte el input y muestre un formulario */
 
   list.addEventListener('click', function() {
     event.preventDefault();
@@ -28,12 +28,11 @@ window.addEventListener('load', function() {
     form.appendChild(button); 
     section.appendChild(form);
 
-    sectionForm.removeChild(list);
     section.removeChild(sectionForm);
       
     /* Al realizar este evento se mostrará un nuevo cuadro con el nombre de la lista agregada */
     
-    button.addEventListener('click', function newBox() {
+    button.addEventListener('click', function() {
       event.preventDefault();
       if (input.value) {
         var nameList = document.createElement('div');
@@ -43,13 +42,11 @@ window.addEventListener('load', function() {
         textList.textContent = input.value;
         textList.className = 'text-list';
           
-        var tarea = document.createElement('p');
+        var tarea = document.createElement('a');
         var textTarea = document.createTextNode('Añadir una tarea...');
         tarea.className = 'text-tarea';
+        tarea.setAttribute('href', '#');
         
-        button.removeChild(text);
-        form.removeChild(input); 
-        form.removeChild(button); 
         section.removeChild(form);
   
         tarea.appendChild(textTarea);
@@ -57,9 +54,6 @@ window.addEventListener('load', function() {
         nameList.appendChild(tarea);
         section.appendChild(nameList);
   
-        button.appendChild(text);
-        form.appendChild(input); 
-        form.appendChild(button); 
         section.appendChild(form);
 
         input.value = '';
@@ -67,7 +61,7 @@ window.addEventListener('load', function() {
   
       /* Al realizar este evento se mostrará un formulario con un textarea y un botón */
         
-      tarea.addEventListener('click', function showForm() {
+      tarea.addEventListener('click', function() {
         var textarea = document.createElement('textarea');
         textarea.className = 'textarea';
   
@@ -79,13 +73,12 @@ window.addEventListener('load', function() {
         addbutton.appendChild(addText);
         nameList.appendChild(addbutton);
                   
-        tarea.removeChild(textTarea);
         nameList.removeChild(tarea);
       
               
         /* Al realizar este evento se mostrará el texto de la tarea debajo del título de la lista */
       
-        addbutton.addEventListener('click', function textDown() {
+        addbutton.addEventListener('click', function() {
           if (textarea.value === '') {
 
           } else {
